@@ -1,0 +1,26 @@
+#app {
+  display: grid;
+  grid-template-columns: 51.25% 48.75%;
+
+  height: 100vh;
+  overflow: hidden; /*indica que não terá rolagem no app */
+}
+
+main {
+  overflow: auto; /*indica que terá rolagem no main */
+  padding: 4rem;
+
+  & .main-container {
+    max-width: 33rem; /*largura máxima para o conteúdo ocupar dentro do main-container*/
+    margin-left: auto; /*para que o conteúdo do main-container fique sempre alinhado ao lado direito da caixa */
+  }
+}
+
+aside {
+  background-color: var(--surface-secondary);
+  padding: 4rem;
+
+  & .aside-container{
+    max-width: 31rem; /*largura máxima para o conteúdo ocupar dentro do aside-container*/
+  }
+}
