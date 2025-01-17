@@ -28,4 +28,16 @@
 
 body {
   overflow: hidden; /*indica que não terá rolagem no body */
+
+  font: var(--text); /* para alterar a fonto dentro do body */
+  color: var(--text-secondary); /* para altear a cor da fonto dentro do body */
+}
+
+h1, h2 {
+  color: var(--text-primary) /* para altear apenas as cores de h1 e h2 */
+}
+
+img {
+  max-width: 100%; /* para as imagens se enquandrarem bem com o aumento ou diminuição de zoom */
+  height: auto;
 }
