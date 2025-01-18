@@ -1,0 +1,48 @@
+input, textarea, select {
+  appearance: none; /* para retirar qualquer efeito padrão do navegador */
+  width: 100%;
+  border-radius: .5rem;
+  border: 1px solid var(--stroke-default);
+  padding: .75rem 1rem;
+  font: var(--text);
+}
+
+label {
+  font: var(--text-sm);
+  color: var(--text-secondary);
+  display: block; /* serve para que todas as labels tenham o mesmo margin-bottom */
+  margin-bottom: .25rem;
+}
+
+input:focus, /* focus é para inserir estilos quando o usuário clicar no campo */
+select:focus,
+textarea:focus {
+  outline: .25rem solid var(--surface-secondary); /* é a cor envolta da caixa */
+  border: .125rem solid var(--stroke-highlight); /* é a cor da borda da caixa */
+  outline-offset: .1px; /* para que a cor da borda da caixa apareca no navegador safari*/
+}
+
+input[type="date"] {
+  position: relative; /* para que o elemento filho com "positon:abosolute" seja posicionado em relação ao elemento pai */
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0; /* para esconder o calendário padrão do navegador */
+  }
+
+  &::before {
+    content: ""; /* todo before precisa ter um content */
+    position: absolute; /* esse é o elemento filho com o "positon:absolute" */
+    background: url(../../assets/icons/calendar-03.svg) center/contain; /* para deixar o elemento com a imagem  do calendário que precisamos */
+    right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+
+    /* para alinhar o calendário ao meio quando está absoluta */
+    top: 50%; /* vai dividir o espaço ao meio e o topo do calendário estará exatamento no meio, desta forma, ele ficara do meio para baixo */
+    transform: translateY(-50%); /* para que o calendário vá exatamente para o meio */
+  }
+}
+
+select {
+  background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+  /* o calc é uma função que serve para colocar a seta no canto direito, através do 100% e dar o espaço de 16px entre a seta e a borda, através do 1rem */
+}

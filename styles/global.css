@@ -27,7 +27,7 @@
 }
 
 body {
-  overflow: hidden; /*indica que não terá rolagem no body */
+  overflow: hidden; /* indica que não terá rolagem no body */
 
   font: var(--text); /* para alterar a fonto dentro do body */
   color: var(--text-secondary); /* para altear a cor da fonto dentro do body */

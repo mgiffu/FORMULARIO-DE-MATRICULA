@@ -7,7 +7,7 @@
 }
 
 main {
-  overflow: auto; /*indica que terá rolagem no main */
+  overflow: auto; /* indica que terá rolagem no main */
   padding: 4rem;
 
   & .main-container {
