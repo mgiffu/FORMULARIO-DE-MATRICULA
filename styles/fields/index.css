@@ -49,3 +49,19 @@ select {
   background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
   /* o calc é uma função que serve para colocar a seta no canto direito, através do 100% e dar o espaço de 16px entre a seta e a borda, através do 1rem */
 }
+
+.address .flex { /* essa linha de comando se lê "quando tiver flex no address" */
+  gap: 1.25rem;
+}
+
+.input-wrapper:has([disabled]) { /* essa linha de comando se lê "se dentro do input-wrapper algum atributo com  disable, então pegue ele e faça o que for informado nesse código" */
+opacity: .5;
+}
+
+.input {
+  &[disabled] { /* essa linha de comando se lê "o input que tenha o atributo disable nele, então execute o código que será informado aqui" */
+    background-color: var(--surface-disabled);
+    border: 1px solid var(--stroke-default);
+    color: var(--text-primary);
+  }
+}

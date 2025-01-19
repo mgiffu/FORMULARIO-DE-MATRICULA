@@ -41,3 +41,15 @@ img {
   max-width: 100%; /* para as imagens se enquandrarem bem com o aumento ou diminuição de zoom */
   height: auto;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1
+}
+
+.flex-2 {
+  flex: 2
+}
