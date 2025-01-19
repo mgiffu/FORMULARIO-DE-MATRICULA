@@ -1,0 +1,41 @@
+/* Esse css irá estilizar somente a área para inseirir o arquivo de certidão de nascimento */
+/*  */
+.dropzone {
+  border: 1px dashed var(--stroke-default);
+  border-radius: .25rem;
+
+  display: grid;
+  justify-items: center; /* para alinhar os elementos no centro */
+  gap: .5rem;
+  text-align: center; /* para alinhar o texto no centro */
+  padding: 1.75rem 1rem;
+
+  position: relative;
+
+  & input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0; /* para alinhar ao topo da caixa */
+    opacity: 0; /* para "esconder" o botão de "choose file" */
+  }
+
+  & p {
+    color: #A8A29E; /* alterar a cor do p */
+  }
+
+  &:hover, &:has(input:focus) { /* &:has(input:focus) é para veriridar se o imput esta em foco, ou seja quando der tap para passar de área, ele deixar a área para colcoar arquivo em foco também */
+    border-width: 2px;
+    border-color: var(--stroke-highlight);
+    background-color: var(--surface-secondary);
+
+    & p {
+      color: var(--text-tertiary);
+    }
+
+    & svg path {
+      stroke: var(--stroke-highlight); /* para alterar a cor da nuvem */
+  }
+
+  
+}

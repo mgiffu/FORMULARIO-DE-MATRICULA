@@ -1,3 +1,5 @@
+@import url(droparea.css);
+
 input, textarea, select {
   appearance: none; /* para retirar qualquer efeito padrão do navegador */
   width: 100%;
@@ -16,7 +18,8 @@ label {
 
 input:focus, /* focus é para inserir estilos quando o usuário clicar no campo */
 select:focus,
-textarea:focus {
+textarea:focus,
+input[type="date"]:focus-within { /* o [type="date"]:focus-within vai verificar se todos os elementos dentro do input do tipo date estão em foco*/
   outline: .25rem solid var(--surface-secondary); /* é a cor envolta da caixa */
   border: .125rem solid var(--stroke-highlight); /* é a cor da borda da caixa */
   outline-offset: .1px; /* para que a cor da borda da caixa apareca no navegador safari*/
