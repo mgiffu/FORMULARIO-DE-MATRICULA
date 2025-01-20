@@ -58,10 +58,35 @@ select {
 opacity: .5;
 }
 
-.input {
+input {
   &[disabled] { /* essa linha de comando se lê "o input que tenha o atributo disable nele, então execute o código que será informado aqui" */
     background-color: var(--surface-disabled);
     border: 1px solid var(--stroke-default);
     color: var(--text-primary);
   }
+
+  &:invalid { /* esse seletor verá quando o campo está invalidado, caso o campo esteja invalidado, devido ao riquired que foi colocado no html, ele apresentará as condições dentro desse código */
+    border: 0.125rem solid var(--semantic-error);
+  }
+
+  & + small { /* essa linha de comando se lê "o input que tiver o small como irmão" */
+    font: var(--text-sm);
+    color: #78716C;
+    display: inline-block; /* para inserir uma separação entre ele e a caixa, o block é quem gera essa caracteristica */
+    margin-top: .25rem;
+  }
+
+  &[required] + .error { /* essa linha de comando se lê "o input que tiver um riquired e ao lado dele um error, aplique esse código no error" */
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    font: var(--text-sm);
+    color: var(--semantic-error);
+    margin-top: .25rem;
+  }
+
+  &:not(:focus):valid + .error { /* essa linha de comando se lê "quando o imput não estiver em foco e for valido a classe error, então aplique o código abaixo" */
+    display: none;
+  }
+  
 }

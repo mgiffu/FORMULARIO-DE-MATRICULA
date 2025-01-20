@@ -106,6 +106,29 @@
                 </div>
               </div>
             </fieldset>
+
+            <fieldset class="guardian">
+              <div class="input-wrapper">
+                <legend>Informações do Responsável</legend>
+                <label for="guardian">Nome do Responsável</label>
+                <input type="text" id="guardian" name="guardian">
+                <small>Principal resonsável legal e contato de emergência</small>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="phone">Telefone</label>
+                <input type="text" id="phone" name="phone" placeholder="(14) 9 8765-4321">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="mail">E-mail</label>
+                <input type="email" name="mail" id="mail" required> <!-- o required indica que o preenchimento do campo é obrigadtório -->
+                <div class="error">
+                  <img src="assets/icons/alert-circle.svg" alt="íncone de alerta">
+                  <span>Insira um e-mail válido</span>
+                </div>
+              </div>
+            </fieldset>
         </form>
       </div>
     </main>
