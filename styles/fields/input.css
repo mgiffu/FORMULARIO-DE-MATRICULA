@@ -1,8 +1,11 @@
-input, textarea, select {
+input, 
+textarea, 
+select {
   appearance: none; /* para retirar qualquer efeito padrão do navegador */
   width: 100%;
   border-radius: .5rem;
-  border: 1px solid var(--stroke-default);
+  border: 2px solid transparent; /* é um pequeno truque para que ao clicar nas caixas e o destaque aparecer, os elementos da pagina não se mexam levemente para baixo. Dessa forma não tem movimentação. Isso foi verificado no finalzinho da aula, depois do GitHub */
+  outline: 1px solid var(--stroke-default);
   padding: .75rem 1rem;
   font: var(--text);
 }
