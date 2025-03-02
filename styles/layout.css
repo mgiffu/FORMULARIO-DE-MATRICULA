@@ -34,6 +34,7 @@ aside {
 
   & .aside-container{
     max-width: 31rem; /*largura máxima para o conteúdo ocupar dentro do aside-container*/
+    margin-left: auto;
 
     & > img { /* para "pegar" a primeira imagem dentro do aside-container */
       margin-top: 2rem;    
